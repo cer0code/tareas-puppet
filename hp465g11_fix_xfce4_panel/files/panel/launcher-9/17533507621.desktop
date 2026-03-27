@@ -1,0 +1,46 @@
+[Desktop Entry]
+X-SnapInstanceName=firefox
+Version=1.0
+Type=Application
+X-SnapAppName=firefox
+Exec=firefox %u
+Terminal=false
+Icon=firefox
+StartupWMClass=firefox_firefox
+Categories=GNOME;GTK;Network;WebBrowser;
+MimeType=application/json;application/pdf;application/rdf+xml;application/rss+xml;application/x-xpinstall;application/xhtml+xml;application/xml;audio/flac;audio/ogg;audio/webm;image/avif;image/gif;image/jpeg;image/png;image/svg+xml;image/webp;text/html;text/xml;video/ogg;video/webm;x-scheme-handler/chrome;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/mailto;
+StartupNotify=true
+Actions=new-window;new-private-window;open-profile-manager;
+Name=Firefox
+Name[es_AR]=Firefox
+Name[es_ES]=Firefox
+Comment=Browse the World Wide Web
+Comment[es_AR]=Navegar la World Wide Web
+Comment[es_ES]=Navegar por la web
+GenericName=Web Browser
+GenericName[es_AR]=Navegador web
+GenericName[es_ES]=Navegador web
+Keywords=Internet;WWW;Browser;Web;Explorer;
+Keywords[es_AR]=Internet;WWW;Navegador;Web;Explorador;
+Keywords[es_ES]=Internet;WWW;Navegador;Web;Explorador;
+
+[Desktop Action new-window]
+X-SnapAppName=firefox
+Exec=firefox %u --new-window %u
+Name=New Window
+Name[es_AR]=Nueva ventana
+Name[es_ES]=Nueva ventana
+
+[Desktop Action new-private-window]
+X-SnapAppName=firefox
+Exec=firefox %u -private-window %u
+Name=New Private Window
+Name[es_AR]=Nueva ventana privada
+Name[es_ES]=Nueva ventana privada
+
+[Desktop Action open-profile-manager]
+X-SnapAppName=firefox
+Exec=firefox %u --ProfileManager
+Name=Open Profile Manager
+Name[es_AR]=Abrir administrador de perfiles
+Name[es_ES]=Abrir administrador de perfiles
