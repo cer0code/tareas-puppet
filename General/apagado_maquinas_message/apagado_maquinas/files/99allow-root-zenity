@@ -1,0 +1,5 @@
+# Permitir que el usuario root local acceda al servidor X del usuario actual
+if [ -x /usr/bin/xhost ]; then
+    /usr/bin/xhost +si:localuser:root > /dev/null
+fi
+
