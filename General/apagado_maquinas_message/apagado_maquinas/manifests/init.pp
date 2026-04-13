@@ -9,7 +9,7 @@ class apagado_maquinas {
 #Apagado de máquinas por la mediodía.
         cron { apagado-mediodia:
 #        command => "/sbin/shutdown -h now",
-        command => "export XAUTHORITY=$(find /var/run/lightdm/root/ -type f -name ':0' 2>/dev/null | head -n 1) && export DISPLAY=:0 && /usr/bin/zenity --info --text='El sistema se apagará en 60 segundos. Guarda tu trabajo ahora si no quieres perdelo.' --title='Aviso de Apagado' && /sbin/shutdown -h +1",
+        command => "root export XAUTHORITY=$(find /var/run/lightdm/root/ -type f -name ':0' 2>/dev/null | head -n 1) && export DISPLAY=:0 && (/usr/bin/zenity --warning --text='El sistema se apagará en 60 segundos. Guarda tu trabajo ahora si no quieres perderlo.' --title='Aviso de Apagado' &) ; /sbin/shutdown -h +1",
         user => root,
         hour => 14,
         minute => 35,
@@ -19,7 +19,7 @@ class apagado_maquinas {
 #Apagado de máquinas por la tarde
         cron {  apagado-tarde:
 #        command => "/sbin/shutdown -h now",
-        command => "export XAUTHORITY=$(find /var/run/lightdm/root/ -type f -name ':0' 2>/dev/null | head -n 1) && export DISPLAY=:0 && /usr/bin/zenity --info --text='El sistema se apagará en 60 segundos. Guarda tu trabajo ahora si no quieres perdelo.' --title='Aviso de Apagado' && /sbin/shutdown -h +1",
+        command => "root export XAUTHORITY=$(find /var/run/lightdm/root/ -type f -name ':0' 2>/dev/null | head -n 1) && export DISPLAY=:0 && (/usr/bin/zenity --warning --text='El sistema se apagará en 60 segundos. Guarda tu trabajo ahora si no quieres perderlo.' --title='Aviso de Apagado' &) ; /sbin/shutdown -h +1",
         user => root,
         hour => 16,
         minute => 30,
@@ -29,7 +29,7 @@ class apagado_maquinas {
 #Apagado de máquinas por la noche
         cron {  apagado-noche:
 #        command => "/sbin/shutdown -h now",
-        command => "export XAUTHORITY=$(find /var/run/lightdm/root/ -type f -name ':0' 2>/dev/null | head -n 1) && export DISPLAY=:0 && /usr/bin/zenity --info --text='El sistema se apagará en 60 segundos. Guarda tu trabajo ahora si no quieres perdelo.' --title='Aviso de Apagado' && /sbin/shutdown -h +1",
+        command => "root export XAUTHORITY=$(find /var/run/lightdm/root/ -type f -name ':0' 2>/dev/null | head -n 1) && export DISPLAY=:0 && (/usr/bin/zenity --warning --text='El sistema se apagará en 60 segundos. Guarda tu trabajo ahora si no quieres perderlo.' --title='Aviso de Apagado' &) ; /sbin/shutdown -h +1",
         user => root,
         hour => 23,
         minute => 50,
@@ -37,4 +37,3 @@ class apagado_maquinas {
 	}
 
 }
-
